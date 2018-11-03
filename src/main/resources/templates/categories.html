@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Greg's Whole Life, Reviewed</title>
+	<link rel="stylesheet" type="text/css" href="/css/categories-layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/nav.css">
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li th:each="category : ${categories}"><a th:href="|/categories/${category.id}|" th:text="${category.name}">Category Links</a></li>
+		</ul>
+	</nav>
+
+
+</body>
+</html>
