@@ -21,7 +21,6 @@ package org.wecancodeit.reviewsiteagain.modle;
 		private String reviewName;
 		@Lob
 		private String reviewDescription;
-		private String recomendation;
 		private String reviewRating;
 		private String reviewImage;
 
@@ -41,22 +40,20 @@ package org.wecancodeit.reviewsiteagain.modle;
 		public Review() {
 		}
 
-		public Review(String reviewName, String reviewDescription, String recomendation, String reviewRating,
+		public Review(String reviewName, String reviewDescription, String reviewRating,
 				String reviewImage, Category category, List<Tag> tags) {
 			this.reviewName = reviewName;
 			this.reviewDescription = reviewDescription;
-			this.recomendation = recomendation;
 			this.reviewRating = reviewRating;
 			this.reviewImage = reviewImage;
 			this.category = category;
 			this.tags = tags;
 		}
 
-		public Review(String reviewName, String reviewDescription, String recomendation, String reviewRating,
+		public Review(String reviewName, String reviewDescription, String reviewRating,
 				String reviewImage, Category category) {
 			this.reviewName = reviewName;
 			this.reviewDescription = reviewDescription;
-			this.recomendation = recomendation;
 			this.reviewRating = reviewRating;
 			this.reviewImage = reviewImage;
 			this.category = category;
@@ -74,9 +71,6 @@ package org.wecancodeit.reviewsiteagain.modle;
 			return reviewDescription;
 		}
 
-		public String getRecomendation() {
-			return recomendation;
-		}
 
 		public String getReviewRating() {
 			return reviewRating;
