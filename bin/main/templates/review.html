@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title th:text="${review.reviewName}">title</title>
+	<link rel="stylesheet" type="text/css" href="/css/review-layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/nav.css">
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+</head>
+	<nav>
+		<ul>
+			<li th:each="category : ${categories}"><a th:href="|/categories/${category.id}|" th:text="${category.name}">Category Links</a></li>
+		</ul>
+	</nav>
+<body>
+
+	<main>
+		<div>
+			<h1 th:text="${review.reviewName}">review Name</h1>
+			<figure>
+				<img th:src="@{|/images/${review.reviewImage}|}">
+			</figure>
+			
+		</div>		
+		<div id="description">
+			<p th:text="${review.reviewRating}">review rating</p>
+			<p th:text="${review.reviewDescription}">description</p>
+			<p th:text="${review.recomendation}"></p>
+		</div>
+		
+		<form th:action="|/reviews/${review.id}|" method="post">
+		<label>Username: <input type="text" name="username" /></label>
+		<textarea name="content" placeholder="Leave a comment"></textarea>
+		<input type="submit" value="Submit" />
+	</form>
+
+	<ul>
+		<li th:each="comment : ${review.comments}">
+		
+			<h2 th:text="${comment.username}"></h2>
+			<h3 th:text="${comment.content}"></h3>
+		</li>
+	</ul>
+
+	<p class="tags">
+		<label >Add a Tag: <input class="taggyTag"type="text" name="tagName"/></label>
+		<button class="tagSubmit">Submit</button>
+	</p>
+	
+	<ul>
+		<li th:each="tag : ${review.tags}">
+		
+			<h2 th:text="${tag.tagName}"></h2>
+		</li>
+	</ul>
+	
+	<script src="/js/app.js"></script>
+	</main>
+
+</body>
+</html>

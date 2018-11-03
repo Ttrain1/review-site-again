@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Greg's Whole Life, Reviewed</title>
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+</head>
+<body>
+	<h1>SITE MAP:</h1>
+	<ul>
+		<li th:each="review : ${reviews}">
+			<a th:href="|/reviews/${review.id}|" th:text="|${review.category.name}: ${review.reviewName}|"></a>
+		</li>
+	</ul>
+
+
+</body>
+</html>
