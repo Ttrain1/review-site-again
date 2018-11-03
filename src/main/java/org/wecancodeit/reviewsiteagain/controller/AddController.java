@@ -31,7 +31,11 @@ public class AddController {
 
 	@Autowired
 	TagRepository tagRepo;
-
+	
+	@RequestMapping("/")
+	public String goToHome(Model model){
+	return "redirect:/categories"; 
+	}
 	@RequestMapping("categories")
 	public String listCourses(Model model) {
 				model.addAttribute("categories", categoryRepo.findAll());
