@@ -2,18 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Video Games Categories</title>
-	<link rel="stylesheet" type="text/css" href="/css/categories-layout.css">
-	<link rel="stylesheet" type="text/css" href="/css/nav.css">
 	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/css/categories-layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/nav.css">-->
 </head>
 
 <body>
+<div class="wrapper">
 	<article th:each="category : ${categories}">
+		<div class="container">
 		<ul>
-			<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.name}">Category Links</a><h3></li>
+			<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.name}">Category Links</a></h3></li>
 		</ul>
+		</div>
 	</article>
 
-
+</div>
 </body>
 </html>

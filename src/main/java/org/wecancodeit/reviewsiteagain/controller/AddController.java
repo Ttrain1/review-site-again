@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.reviewsiteagain.modle.Comment;
+import org.wecancodeit.reviewsiteagain.modle.Review;
 import org.wecancodeit.reviewsiteagain.modle.Category;
 import org.wecancodeit.reviewsiteagain.modle.Tag;
 import org.wecancodeit.reviewsiteagain.repository.CategoryRepository;
@@ -76,6 +77,11 @@ public class AddController {
 		tagRepo.save(tag);
 		return "redirect:/reviews/{id}";
 	}
-
+	@RequestMapping("/tag/{id}")
+	public String getTag(@PathVariable(value= "id") Long id, String tagName, Model model) {
+		tagRepo.saveAll(new Tag(String tagName, Review review));
+		return "tag";
+		
+	}
 }
 
