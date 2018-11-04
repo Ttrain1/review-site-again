@@ -24,7 +24,6 @@
 		<div id="description">
 			<p th:text="${review.reviewRating}">review rating</p>
 			<p th:text="${review.reviewDescription}">description</p>
-			<p th:text="${review.recomendation}"></p>
 		</div>
 		
 		<form th:action="|/reviews/${review.id}|" method="post">

@@ -2,6 +2,7 @@ package org.wecancodeit.reviewsiteagain;
 
 import javax.annotation.Resource;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 import org.wecancodeit.reviewsiteagain.modle.Category;
 import org.wecancodeit.reviewsiteagain.modle.Review;
@@ -9,7 +10,7 @@ import org.wecancodeit.reviewsiteagain.repository.CategoryRepository;
 import org.wecancodeit.reviewsiteagain.repository.ReviewRepository;
 
 @Service
-public class Populator {
+public class Populator implements CommandLineRunner {
 
 	@Resource
 	CategoryRepository categoryRepo;
@@ -17,8 +18,7 @@ public class Populator {
 	@Resource
 	ReviewRepository reviewRepo;
 
-	
-
+	@Override
 	public void run(String... args) throws Exception {
 		Category category1 = new Category("Sprite");
 		Category category2 = new Category("Game");
