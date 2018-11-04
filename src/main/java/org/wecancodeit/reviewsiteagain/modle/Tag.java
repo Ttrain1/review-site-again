@@ -49,9 +49,15 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 		public void addReview(Review review) {
 			reviews.add(review);
 		}
-
+		
+		
 		public Collection<Review> getReviews() {
 			return reviews;
+		}
+
+		public void removeReview(Review review) {
+			reviews.remove(review);
+			
 		}
 
 	}

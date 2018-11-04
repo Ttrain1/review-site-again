@@ -91,5 +91,7 @@ package org.wecancodeit.reviewsiteagain.modle;
 		public Collection<Tag> getTags() {
 			return tags;
 		}
-
+		public void removeTag(Tag tag) {
+			tags.remove(tag);
+		}
 	}

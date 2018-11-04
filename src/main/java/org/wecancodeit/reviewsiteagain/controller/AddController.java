@@ -78,10 +78,15 @@ public class AddController {
 		return "redirect:/reviews/{id}";
 	}
 	@RequestMapping("/tag/{id}")
-	public String getTag(@PathVariable(value= "id") Long id, String tagName, Model model) {
-		tagRepo.saveAll(new Tag(String tagName, Review review));
+	public String getTag(@PathVariable(value = "id") Long id, Model model) {
+		model.addAttribute("categories", categoryRepo.findAll());
+		model.addAttribute("tag", tagRepo.findById(id).get());
+		System.out.println(tagRepo.findById(id).get().getReviews());
+		for (Review review : tagRepo.findById(id).get().getReviews()) {
+			System.out.println("The name is " + review.getReviewName());
+		}
+		;
 		return "tag";
-		
 	}
 }
 

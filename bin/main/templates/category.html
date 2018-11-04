@@ -8,16 +8,20 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
+
+<header>
+<div class="navBar">
 	<nav>
 		<ul>
 			<li th:each="category : ${categories}"><a th:href="|/categories/${category.id}|" th:text="${category.name}">Category Links</a></li>
 		</ul>
 	</nav>
 
-		<header>
+
+		
 			<h1 th:text="|${category.name}|">Category</h1>
 		</header>
-
+</div>
 		<ul>
 			<li th:each="review : ${category.reviews}">
 				<img th:src="@{|/images/${review.reviewImage}|}" th:href="|/reviews/${review.id}|" th:alt="${review.reviewName}">

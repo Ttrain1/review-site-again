@@ -27,7 +27,7 @@ import org.wecancodeit.reviewsiteagain.repository.TagRepository;
 		@Autowired
 		ReviewRepository reviewRepo;
 
-		// get rid of fancy stuff
+		
 		@GetMapping("/api/reviews/{id}")
 		public Collection<Tag> getTagsForReview(@PathVariable(value = "id") Long id) {
 			return reviewRepo.findById(id).get().getTags();
@@ -57,5 +57,19 @@ import org.wecancodeit.reviewsiteagain.repository.TagRepository;
 			}
 
 			return review.getTags();
+		}
+		
+		@PostMapping("/api/review/{id}/tags/remove")
+		public void removeTag(@PathVariable(value = "id") Long id, @RequestBody String body) throws JSONException {
+			System.out.println(body);
+			JSONObject json = new JSONObject(body);
+			String tagName = json.getString("tagName");
+			Review review = reviewRepo.findById(id).get();
+			Tag tag = tagRepo.findByTagName(tagName);
+			if (tag != null) {
+				review.removeTag(tag);
+				tag.removeReview(review);
+				reviewRepo.save(review);
+			}
 		}
 }
