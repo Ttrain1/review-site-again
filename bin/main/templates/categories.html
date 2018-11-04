@@ -8,11 +8,11 @@
 </head>
 
 <body>
-	<nav>
+	<article th:each="category : ${categories}">
 		<ul>
-			<li th:each="category : ${categories}"><a th:href="|/categories/${category.id}|" th:text="${category.name}">Category Links</a></li>
+			<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.name}">Category Links</a><h3></li>
 		</ul>
-	</nav>
+	</article>
 
 
 </body>

@@ -8,5 +8,6 @@ public class ReviewSiteAgainApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ReviewSiteAgainApplication.class, args);
+		System.out.println("Your server is running");
 	}
 }
