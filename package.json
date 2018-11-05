@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Ttrain1/Review-Site-again/issues"
   },
-  "homepage": "https://github.com/Ttrain1/Review-Site-again#readme"
+  "homepage": "https://github.com/Ttrain1/Review-Site-again#readme",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
 }
