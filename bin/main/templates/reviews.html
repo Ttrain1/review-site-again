@@ -3,17 +3,21 @@
 <head>
 	<title>Video Game reviews</title>
 	<link rel="stylesheet" type="text/css" href="/css/layout.css">
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/styleR.css">
 </head>
 <body>
+
 <header>
 	<h1>Menu:</h1>
 </header>	
+	<div class="reviewsA">
 	<ul>
 		<li th:each="review : ${reviews}">
 			<a th:href="|/reviews/${review.id}|" th:text="|${review.category.name}: ${review.reviewName}|"></a>
 		</li>
 	</ul>
+
+</div>
 
 
 </body>

@@ -1,0 +1,14 @@
+body {
+	background-image: url("8bit.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+	background-color: var(--dark);
+	position: fixed;
+}
+
+a, li {
+	color: white;
+}

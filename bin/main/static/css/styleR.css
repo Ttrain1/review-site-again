@@ -1,0 +1,19 @@
+body {
+	background-image: url("8bit.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+	background-color: var(--dark);
+	padding-bottom: -2rem;
+	padding-top: -2rem;
+	margin-bottom: 1rem;
+}
+
+a {
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+	margin-left: 2rem;
+}

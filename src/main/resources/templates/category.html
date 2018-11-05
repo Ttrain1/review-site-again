@@ -2,32 +2,35 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title th:text="|${category.name}|">Category</title>
-	<!-- <link rel="stylesheet" type="text/css" href="/css/category-layout.css">
-	<link rel="stylesheet" type="text/css" href="/css/nav.css"> -->
+
 	<link rel="stylesheet" type="text/css" href="/css/layout.css">
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/styleC.css">
 </head>
+
+<div class="backgroundImg">
+
 <body>
 
 <header>
-<div class="navBar">
+
 	<nav>
 		<ul>
 			<li th:each="category : ${categories}"><a th:href="|/categories/${category.id}|" th:text="${category.name}">Category Links</a></li>
 		</ul>
-	</nav>
+	
+</header>
 
-
-		
+</nav>	
 			<h1 th:text="|${category.name}|">Category</h1>
-		</header>
-</div>
-		<ul>
-			<li th:each="review : ${category.reviews}">
-				<img th:src="@{|/images/${review.reviewImage}|}" th:href="|/reviews/${review.id}|" th:alt="${review.reviewName}">
+		
+	<ul>
+				<li th:each="review : ${category.reviews}">
 				<a th:href="|/reviews/${review.id}|" th:text="|${review.reviewName}|"></a>
+				
+				<img th:src="@{|/images/${review.reviewImage}|}" th:href="|/reviews/${review.id}|" th:alt="${review.reviewName}">
+				
 			</li>
 		</ul>
-
+	</div>
 </body>
 </html>

@@ -22,7 +22,7 @@ a {
 footer,
 header {
 	align-items: center;
-	background-color: var(--dark);
+	/*background-color: var(--dark);*/
 	color: var(--light);
 	display: flex;
 	justify-content: space-between;
@@ -37,6 +37,8 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	padding: 2rem;
+	margin: 1rem;
 }
 
 ul {
@@ -68,24 +70,37 @@ nav ul li {
 	min-height: 100vh;
 }
 
-.navBar{
+nav {
  overflow: hidden;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
+ position: fixed;
+ width: 100%;
+
 }
 
 .content {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	padding: 5rem;
 }
 
-.image {
+img {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	width: 80%;
+
 }
 
 .forms {
@@ -93,9 +108,10 @@ nav ul li {
 	flex-direction: row;
 	justify-content: space-around;
 	flex-wrap: wrap; 
+	padding: 2rem;
 
 }
 
 .comments {
-	padding-top: 2rem;
+	padding-top: 5rem;
 }

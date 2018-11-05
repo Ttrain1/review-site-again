@@ -1,0 +1,24 @@
+body {
+	background-image: url("8bit.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+a {
+	color: white;
+	font-weight: bold;
+	background-color: var(--dark);
+	padding: 10px;
+}
+
+a :hover {
+	color: var(--dark);
+	background-color: white;
+}
+
+header {
+	background-color: var(--dark);
+	margin-top: -1rem;
+	margin-bottom: -1rem;
+}

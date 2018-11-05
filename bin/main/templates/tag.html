@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/styleT.css">
+
 	<title th:text="${tag.tagName}"></title>
 </head>
 <body>
+
+	<div class="backgroundImg">
 	<nav>
 		<ul>
 			<li th:each="category : ${categories}"><a th:href="|/categories/${category.id}|" th:text="${category.name}">Category Links</a></li>
@@ -17,6 +22,6 @@
 			<li th:each="review : ${tag.reviews}" th:text="${review.reviewName}">
 			</li>
 		</ul>
-
+	</div>
 </body>
 </html>
