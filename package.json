@@ -1,0 +1,20 @@
+{
+  "name": "review-site-again",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ttrain1/Review-Site-again.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ttrain1/Review-Site-again/issues"
+  },
+  "homepage": "https://github.com/Ttrain1/Review-Site-again#readme"
+}
